@@ -38,11 +38,8 @@ Companion PyTorch experiment code. Official paper repository: [https://github.co
 
 ## Environment
 
-| Item | Notes |
-| --- | --- |
-| Recommended setup | Docker container **hsi-gqk**, or any equivalent CUDA + Python environment |
-| Python | **3.9–3.11** recommended (match your PyTorch wheels) |
-| GPU | NVIDIA GPU with a CUDA build of PyTorch |
+- Experiments on **IP**, **UP**, and **HU13** were conducted on a workstation equipped with an Intel® Core™ i9-13900HX processor (2.20 GHz), 16 GB of RAM, and a single NVIDIA GeForce RTX 4060 GPU (8 GB VRAM); **HU18** was conducted on a server equipped with an Intel® Xeon® Gold 6459C processor, 94 GB of RAM, and a single NVIDIA RTX A6000 GPU (48 GB VRAM).
+- We adopt Python 3.12.12, Pytorch 2.4.0+cu118
 
 Installation:
 
@@ -67,11 +64,7 @@ Set the dataset code and root path via `dataset.name` and `dataset.data_path` in
 | --- | --- | --- |
 | `IP` | `Indian_pines_corrected.mat` | `Indian_pines_gt.mat` |
 | `UP` | `PaviaU.mat` | `PaviaU_gt.mat` |
-| `SA` | `Salinas_corrected.mat` | `Salinas_gt.mat` |
-| `BOT` | `Botswana.mat` | `Botswana_gt.mat` |
-| `KSC` | `KSC.mat` | `KSC_gt.mat` |
-| `CH` | `Chikusei.mat` (HDF5 / v7.3, read with `h5py`) | `Chikusei_gt.mat` |
-| `HU` | `DFC2013_Houston.mat` | `DFC2013_Houston_gt.mat` |
+| `HU13` | `DFC2013_Houston.mat` | `DFC2013_Houston_gt.mat` |
 | `HU18` | `HoustonU.mat` | `HoustonU_gt.mat` |
 
 Some `.mat` files use Matlab v7.3 (HDF5). The code falls back to `h5py` where needed (e.g., **HU18**).
@@ -105,7 +98,7 @@ GaoQianKun_hsi/
 
 ## Running
 
-1. Edit `config/config.py`: set `model_name` (e.g. `CPFormer`), `dataset.name`, `dataset.data_path`, and training options.
+1. Edit `config/config.py`: set `model_name` (e.g. `CPFormer`), `dataset.name`, and training options.
 2. Copy the required `.mat` files into `data/` (or your `data_path`).
 3. Run:
 
