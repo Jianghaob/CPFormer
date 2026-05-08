@@ -25,11 +25,14 @@ Companion PyTorch experiment code. Official paper repository: [https://github.co
 
 ## CPFormer Framework
 
-Place the framework figure at `src/CPFormer_Framework.png` under the project root (same path as below) so it renders in Markdown previews.
-
-![CPFormer Framework](src/CPFormer_Framework.png)
-
-Example absolute path: `/storage/jhb/GaoQianKun_hsi/GCN/LG-GCN/GaoQianKun_hsi/src/CPFormer_Framework.png`.
+<table>
+  <tr>
+    <td colspan="1" align="center">
+      <b>CPFormer Framework</b><br/>
+      <img src="src/CPFormer_Framework.png" alt="CPFormer Framework" width="90%"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
