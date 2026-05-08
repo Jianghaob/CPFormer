@@ -50,8 +50,6 @@ Installation:
 pip install -r requirements.txt
 ```
 
-**Note:** `fvcore` is used for FLOPs estimation on some two-branch models; if it is missing, `train_test.py` skips that path and prints a warning. `model/MambaHSI.py` depends on `mamba-ssm`; the default entry script does not load that model—install separately only if you use it.
-
 ---
 
 ## Data Sets and File Hierarchy
@@ -72,7 +70,7 @@ Some `.mat` files use Matlab v7.3 (HDF5). The code falls back to `h5py` where ne
 ### Repository layout (summary)
 
 ```
-GaoQianKun_hsi/
+CPFormer/
 ├── README.md
 ├── requirements.txt
 ├── train_test.py              # Main training / testing entry
